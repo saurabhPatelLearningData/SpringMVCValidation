@@ -45,7 +45,7 @@ public class LoginTest {
 		login.setUsername("sushmita");
 		login.setPassword("sushmita");
 		ModelAndView model = loginController.loginProcess(request, response, login);
-		assertEquals("login", model.getViewName());
+		assertEquals("welcome", model.getViewName());
 		
 	}
 
