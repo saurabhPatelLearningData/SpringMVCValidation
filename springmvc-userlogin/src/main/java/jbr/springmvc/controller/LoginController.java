@@ -33,11 +33,11 @@ public class LoginController {
       @ModelAttribute("login") Login login) {
     ModelAndView mav = null;
 
-    User user = userService.validateUser(login);
+    //User user = userService.validateUser(login);
 
-    if (null != user) {
+    if (null != login) {
       mav = new ModelAndView("welcome");
-      mav.addObject("firstname", user.getFirstname());
+      mav.addObject("firstname", login.getUsername());
     } else {
       mav = new ModelAndView("login");
       mav.addObject("message", "Username or Password is wrong!!");
